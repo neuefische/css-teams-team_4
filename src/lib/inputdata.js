@@ -4,7 +4,7 @@ const cocktailZombie = {
   headline: "Zombie",
   detailPage: "./pages/ingredients.html",
   alcoholic: "#alcoholic",
-  strenght: 3,
+  strenght: 5,
   fav: false
 };
 
@@ -14,7 +14,7 @@ const cocktailFlyingKangaroo = {
   headline: "Flying Kangaroo",
   detailPage: "./pages/ingredients.html",
   alcoholic: "#alcoholic",
-  strenght: 5,
+  strenght: 3,
   fav: false
 };
 
@@ -28,8 +28,30 @@ const cocktailMickyMouse = {
   fav: false
 };
 
+const cocktailCampariOrange = {
+  pic:
+    "https://images.unsplash.com/photo-1559842623-b82d2e1228a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80",
+  headline: "Campari Orange",
+  detailPage: "./pages/ingredients.html",
+  alcoholic: "#alcoholic",
+  strenght: 2,
+  fav: false
+};
+
+const cocktailCaipirinha = {
+  pic:
+    "https://images.unsplash.com/photo-1559842623-b82d2e1228a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80",
+  headline: "Caipirinha (Caipi)",
+  detailPage: "./pages/ingredients.html",
+  alcoholic: "#alcoholic",
+  strenght: 4,
+  fav: false
+};
+
 export const cocktailArray = [
   cocktailZombie,
   cocktailFlyingKangaroo,
-  cocktailMickyMouse
+  cocktailMickyMouse,
+  cocktailCampariOrange,
+  cocktailCaipirinha
 ];
