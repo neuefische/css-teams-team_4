@@ -4,11 +4,28 @@ const cocktailZombie = {
   headline: "Zombie",
   detailPage: "./pages/ingredients.html",
   alcoholic: "#alcoholic",
-  strenght: 4,
+  strenght: 3,
   fav: false
 };
 
 const mainTag = document.querySelector("#main");
+
+function createIconStrength(strength) {
+  let count = 0;
+  while (count < strength) {
+    let outputElement = createDivClass("i", "fas fa-cocktail icon--alcohol");
+    cardContentStrength.appendChild(outputElement);
+    count = count + 1;
+    // let outputElement =
+    //   outputElement + "<i class= fas fa-cocktail icon--alcohol> ";
+    // <i class="fas fa-cocktail icon--alcohol"></i>
+  }
+  while (strength < 5) {
+    let outputElement = createDivClass("i", "fas fa-cocktail icon--nonalcohol");
+    cardContentStrength.appendChild(outputElement);
+    strength = strength + 1;
+  }
+}
 
 function createDivClass(element, divClass) {
   element = document.createElement(element);
@@ -49,7 +66,7 @@ const cardContentHead = createDivClassContent(
 );
 const cardContentLink = createDivClassContent(
   "a",
-  "box__content__list__list__link",
+  "",
   cocktailZombie.detailPage
 );
 const cardContentCategory = createDivClassContent(
@@ -57,18 +74,30 @@ const cardContentCategory = createDivClassContent(
   "box__content__list__category",
   cocktailZombie.alcoholic
 );
+const cardContentStrength = createDivClass(
+  "div",
+  "box__content__list__strength"
+);
+const cardContentIngredients = createDivClass(
+  "div",
+  "box__content__list__link"
+);
 
 mainTag.appendChild(cardBox);
 cardBox.appendChild(cardImage);
 cardBox.appendChild(cardContent);
 cardBox.appendChild(cardFav);
 cardImage.appendChild(imageContent);
-cardContent.appendChild(cardContentHead);
-cardContent.appendChild(cardContentLink);
-cardContentLink.innerHTML = "See all ingredients";
-cardContent.appendChild(cardContentCategory);
 
-//
+cardContent.appendChild(cardContentHead);
+cardContent.appendChild(cardContentIngredients);
+cardContentIngredients.appendChild(cardContentLink);
+cardContent.appendChild(cardContentCategory);
+cardContent.appendChild(cardContentStrength);
+createIconStrength(cocktailZombie.strenght);
+cardContentLink.innerHTML = "See all ingredients";
+
+// <i class="fas fa-cocktail icon--alcohol"></i>
 // box__content__list__list__link
 // box__content__list__category
 // box__content__list__strength
