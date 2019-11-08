@@ -4,6 +4,7 @@
 
 - Tobias
 - Girmay
+- Franz
 - Manuel
 
 ## Project description
